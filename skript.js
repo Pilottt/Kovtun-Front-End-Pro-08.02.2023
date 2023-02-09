@@ -1,2 +1,2 @@
-let res = console.log('Your name?:');
+let res = prompt('Your name?:');
 alert (res);
