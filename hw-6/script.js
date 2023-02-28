@@ -1,49 +1,47 @@
 let age = prompt ("Ваш рік народження?");
 let city = prompt ("В якому місті ви живете?");
 let sport = prompt ("Ваш улюблений вид спорту?");
-let Київ, Вашингтон, Лондон, іншеМісто, Бокс, Фехтування, Шахи, іншийСпорт;
+let userAgeMessage, userCityMessage, userSportMessage
 
-if (age == null) {
-    age = "Шкода, що Ви не захотіли ввести свій вік"
+if (age === null) {
+    userAgeMessage = "Шкода, що Ви не захотіли ввести свій вік"
 } else {
-    age = "Ваш вік: " + (2023 - age);
+    userAgeMessage = "Ваш вік: " + (2023 - age);
 }
-if (city == null) {
-    city = "Шкода, що Ви не захотіли ввести своє місто"
-}   else {
+
 switch (city) {
     case "Київ":
-        Київ = ("Ви живете у столиці: України");
+        userCityMessage = ("Ви живете у столиці: України");
         break;
     case "Вашингтон":
-        Вашингтон = ("Ви живете у столиці: США");
+        userCityMessage = ("Ви живете у столиці: США");
         break;
     case "Лондон":
-        Лондон = ("Ви живете у столиці: Англії");
+        userCityMessage = ("Ви живете у столиці: Англії");
+        break;
+    case null:
+        userCityMessage = ("Шкода, що Ви не захотіли ввести своє місто")
         break;
     default:
-        іншеМісто = ("Ви живете у місті: " + city)
-}}
+        userCityMessage = ("Ви живете у місті: " + city)
+}
 
-if (sport == null) {
-    sport = "Шкода, що Ви не захотіли ввести свій улюблений спорт"
-}   else {
 switch (sport) {
     case "Бокс":
-        Бокс = ("Круто! Хочеш стати як: Олександр Усик?");
+        userSportMessage = ("Круто! Хочеш стати як: Олександр Усик?");
         break;
     case "Фехтування":
-        Фехтування = ("Круто! Хочеш стати як: Катерина Чорній?");
+        userSportMessage = ("Круто! Хочеш стати як: Катерина Чорній?");
         break;
     case "Шахи":
-        Шахи = ("Круто! Хочеш стати як: Андрій Волокитін?");
+        userSportMessage = ("Круто! Хочеш стати як: Андрій Волокитін?");
+        break;
+    case null:
+        userSportMessage = ("Шкода, що Ви не захотіли ввести свій улюблений спорт")
         break;
     default:
-        іншийСпорт = ("Ваш улюблений спорт: " + sport)
-}}
+        userSportMessage = ("Ваш улюблений спорт: " + sport)
+}
 
-alert (age + "\n" +
-    ((Київ || Вашингтон) || (Лондон || іншеМісто) || city) + "\n" +
-    ((Бокс || Фехтування) || (Шахи || іншийСпорт) || sport)
-)
+alert (userAgeMessage + "\n" +  userCityMessage + "\n" +   userSportMessage)
 
