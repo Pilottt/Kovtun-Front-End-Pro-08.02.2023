@@ -42,6 +42,4 @@ switch (sport) {
     default:
         userSportMessage = ("Ваш улюблений спорт: " + sport)
 }
-
 alert (userAgeMessage + "\n" +  userCityMessage + "\n" +   userSportMessage)
-
